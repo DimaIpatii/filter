@@ -1,0 +1,60 @@
+.form{
+    @include size(100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    padding: 3rem;
+    
+    background-color: $bg-sidebar;
+    transform: translate(100vw, 0%);
+    transition: transform .5s;
+
+    @include viewport('tab-port'){
+        box-shadow: 0px 0px 30px 0px #0000006e;
+        width: 50%;
+    }
+
+    @include viewport('tab-land'){
+        width: 40%;
+    }
+
+    @include viewport('laptop'){
+        @include size(100%);
+        position: relative;
+        transform: translate(0vw, 0%);
+        box-shadow: 0px 0px 0px 0px transparent;
+    };
+
+    &_show{
+        transform: translate(0vw, 0%);
+
+        @include viewport('tab-port'){
+            transform: translate(-0vw, 0%);
+        }
+    }
+
+    &__fieldset{
+        height : inherit;
+        padding: 0;
+        border: none;
+
+        & legend{margin-bottom: 3.5rem;}
+        & h2{ margin-bottom: 1.5rem;}
+    }
+    
+    &__search,
+    &__toggle,
+    &__select{
+        margin-bottom: 5rem;
+    }
+    &__reset-button{
+        display: inherit;
+        margin: 0 auto;
+    }
+
+    &__clouse-btn{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}

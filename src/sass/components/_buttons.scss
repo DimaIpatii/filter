@@ -1,0 +1,72 @@
+
+/* ******************************************
+Sidebar 
+****************************************** */
+.open-filter-btn{
+    @include size(5rem);
+    @include viewport('laptop'){
+        display: none;
+    }
+}
+.clouse-filter-btn{
+    @include size(5rem);
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    @include viewport('laptop'){
+        display: none;
+    }
+}
+
+.btn-search{
+    @include size(5rem,100%);
+    background-color: $bg-search-btn;
+}
+
+.btn-toggle{
+    display: inline-block;
+    @include size(10rem,4rem);
+    position: relative;
+
+    background-color: $bg-toggle-btn-area;
+    border-radius: 10rem;
+
+    &__label{
+        display: block;
+        @include size(2.5rem);
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-15%,-50%);
+
+        border-radius: 10rem;
+        background-color: $bg-toggle-btn;
+        transition: left .5s;
+
+        &_all {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } 
+        &_no {
+            top: 50%;
+            left: 25%;
+            transform: translate(-65%, -50%);
+        }
+        
+        &_yes {
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__input-wrapper{
+        display: inline-block;
+        @include size(30%,100%);
+        cursor: pointer;
+    }
+    &__input{ display: none;}
+}
+

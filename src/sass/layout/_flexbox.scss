@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include viewport('laptop'){
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.sidebar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+}
+
+.btn-search{
+    @include flex-center;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+}
+
+.select-id{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Panel */
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include viewport('tab-port'){
+        justify-content: initial;
+    }
+
+    &__header{
+        display: flex;
+    }
+    &__footer{
+        @include flex-center;
+    }
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+
+    &__title{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.panel-nav{
+    @include flex-center;
+
+    &__list{
+        @include flex-center;
+    }
+    &__list-item{@include flex-center;}
+}

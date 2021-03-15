@@ -1,0 +1,18 @@
+.sidebar{
+    @include size(100vw,5rem);
+
+    @include viewport('tab-port'){
+        @include size(100vw,10rem);
+    }
+    @include viewport('laptop'){
+        position: relative;
+
+        @include size(33rem,52.3rem);
+        max-width: 33rem;
+    }
+    background-color: $bg-sidebar;
+
+    &__open-filter-btn{
+        margin-right: 2rem;
+    }
+}

@@ -1,0 +1,54 @@
+.panel{
+    width: 100vw;
+    /* Minus filter height in mobile viewport: */
+    height: calc(100vh - 5rem);
+    padding: 2rem 3rem 3rem 3rem;
+    background-color: $bg-panel;
+
+    @include viewport('tab-port'){
+        height: calc(100vh - 10rem);
+    }
+
+    @include viewport('laptop'){
+        @include size(83rem, 63rem);
+        max-width: 83rem;
+        padding: 3rem;
+    }
+    
+    &__header{
+        border-bottom: 1px solid $border-panel;
+
+        /* Title */
+        & p { width: 100%;}
+        
+        /* User ID */
+        & p:first-child{ width: 18rem;}
+
+        /* Completed */
+        & p:last-child{width: max-content;}
+    }
+
+    &__content{
+        min-height: 46.25rem;
+        padding-top: 1rem;
+    }
+    &__list-item{ 
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+
+    &__footer{ 
+        height: 8rem; 
+
+        @include viewport('tab-port'){
+            margin-top: auto;
+        }
+    }
+
+    &__message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

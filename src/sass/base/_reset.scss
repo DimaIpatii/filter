@@ -1,0 +1,50 @@
+@import '~normalize.css';
+
+// ******************************************
+// Default Settings:
+// ******************************************
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 55.5%;
+    
+    @include viewport('tab-port'){
+        font-size: 62.5%;
+    };
+}
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    min-width: 100%;
+    width: 100vw;
+    max-width: 100%;
+
+    min-height: 100%;
+    height: 100vh;
+    max-width: 100%;
+
+    overflow: auto;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}

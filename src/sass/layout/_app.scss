@@ -1,0 +1,15 @@
+.app{
+    position: relative;
+    @include size(100%,100vh);
+    overflow-x: hidden;
+    
+    @include viewport('laptop'){
+        @include size(100%,max-content);
+    }
+
+    &__sidebar{
+        @include viewport('laptop'){
+            margin-right: 5rem;
+        }
+    }
+}

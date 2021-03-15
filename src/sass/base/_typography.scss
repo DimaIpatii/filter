@@ -1,0 +1,88 @@
+@import url(//db.onlinewebfonts.com/c/12cff83c23b642a97c6a98ef97f8ba38?family=Karbon+Regular);
+
+@font-face {
+    font-family: "Karbon Regular"; 
+    src: url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.eot"); 
+    src: url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/12cff83c23b642a97c6a98ef97f8ba38.svg#Karbon Regular") format("svg"); 
+}
+
+body {
+    font-family: "Karbon Regular",sans-serif;
+}
+
+/* ******************************************
+Sidebar 
+****************************************** */
+.sidebar{color: $text-color-main; }
+
+.open-filter-btn{
+    font-size: 3rem;
+    line-height: 0;
+    color: $bg-open-filter-btn;
+
+    @include viewport('tab-port'){
+        font-size: 4rem;
+    }
+}
+
+.clouse-filter-btn{
+    font-size: 3rem;
+    line-height: 0;
+    color: $bg-clouse-filter-btn;
+}
+
+.form{
+    &__fieldset{
+        & legend{
+            text-align: center;
+            font-size: 3.6rem;
+        }
+        & h2{  font-size: 2rem; }
+    }
+}
+
+.search__field{
+   color: $text-color-search;
+
+   &::placeholder{
+        color: $text-color-search;
+   }
+}
+
+.toggle__state{ font-size: 2rem;}
+
+.btn-reset{
+    text-decoration: underline;
+    font-size: 2rem;
+    color: $text-color-main;
+}
+
+
+/* ******************************************
+Panel 
+****************************************** */
+.panel{
+    color: $text-color-main;
+
+    &__header{ font-size: 2rem; }
+}
+
+.list-item{
+    color: $text-color-list-item;
+    font-size: 1.8rem;
+}
+
+.panel-nav{
+    &__icon{ line-height: 0; }
+
+    &__list-item{
+        & a { 
+            text-decoration: none;    
+            color: inherit;
+        }
+    }
+}

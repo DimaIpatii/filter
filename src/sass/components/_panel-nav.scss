@@ -1,0 +1,57 @@
+.panel-nav{
+
+    &__list-item{
+        @include size(3rem);
+        margin: 0 .5rem;
+        border-radius: 10rem;
+        cursor: pointer;
+
+        &:first-child{ margin-left: 1.5rem;}
+        &:last-child{ margin-right: 1.5rem;}
+
+        @include viewport('tab-port'){
+            @include size(2.5rem);
+
+            &:first-child{ margin-left: 1rem;}
+            &:last-child{ margin-right: 1rem;}
+        }
+
+        & a { margin-top: .3rem;}
+        &_dots{
+            cursor:not-allowed;
+        }
+        transition: all .3s;
+    }
+
+    &__icon{
+        @include size(2rem);
+
+        @include viewport('tab-port'){
+            @include size(1.5rem);
+            cursor: pointer;
+        }
+
+        & * {
+            @include size(100%);
+            fill: $border-pagination-arrow;
+        };
+
+        &_disabled{
+            & * { fill: $border-pagination-arrow-disabled;};
+        }
+
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+
+    }
+}
+
+.selected{
+    background-color: $bg-pagination-selected-item;
+    color: $text-color-main-light;
+}

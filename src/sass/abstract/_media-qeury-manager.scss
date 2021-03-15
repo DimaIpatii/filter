@@ -1,0 +1,30 @@
+/* Resolutions */
+
+$phone: 360px; // 360 x 640;
+$tab-port: 767px; // 768 x 1024
+$tab-land: 1024px; // 1024 x 768
+$laptop: 1280px; // 1280 x 800;
+$desktop: 1367px; // 1367 x768;
+$desktop-big: 1920px; // 1920 x 1080;
+
+
+@mixin viewport($device){
+    @if $device == 'phone' {
+        @media only screen and(min-width:$phone){@content};
+    }
+    @if $device == 'tab-port' {
+        @media only screen and(min-width:$tab-port){@content};
+    }
+    @if $device == 'tab-land' {
+        @media only screen and(min-width:$tab-land){@content};
+    }
+    @if $device == 'laptop' {
+        @media only screen and(min-width:$laptop){@content};
+    }
+    @if $device == 'desktop' {
+        @media only screen and(min-width:$desktop){@content};
+    }
+    @if $device == 'desktop-big' {
+        @media only screen and(min-width:$desktop-big){@content};
+    }
+}

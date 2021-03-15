@@ -1,0 +1,45 @@
+.list-item{
+    @include size(100%, 7.05rem);
+    padding: 0 3rem;
+
+    @include viewport('tab-port'){
+        padding-left: 4rem;
+        padding-right: 6rem;
+    }
+
+    background-color: $bg-panel-list-item;
+    border-bottom: 2px solid $border-panel-list-item;
+    
+    &__id{
+        width: 5rem;
+        
+        @include viewport('tab-port'){
+            width: 11rem;
+        }
+    }
+    &__title{
+        @include size(100%);
+        margin-right: 1rem;
+        overflow: auto;
+        white-space: nowrap;
+
+        @include viewport('tab-port'){
+            width: 100%;
+        }
+
+        /* Hide Scrollbar: */
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__state{
+        width: max-content;
+        max-width: 5rem;
+        line-height: 0;
+    }
+}
