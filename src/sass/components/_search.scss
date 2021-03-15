@@ -2,10 +2,6 @@
     @include size(100%, 5rem);
     border: .1rem solid $border-search;
 
-    &__button{
-        
-    }
-
     &__field{
         @include size(calc(100% - 5rem), 100%);
         padding: 1rem;
