@@ -6,7 +6,7 @@ Nella cartella del progetto, si può effettuare i seguenti comandi:
 Effettuando seguente comando, l'applicazione verrà compilato nella cartella './dist' del progetto.
 
 ## Per lo sviluppo con localhost: `npm run start` o `yarn start`
-L'aplicazione si lancerà da solo in Browser selezionato in default, con seguente link: http://localhost:8080/.\
+L'aplicazione si lancerà da solo in Browser selezionato in default, con seguente link: http://localhost:8080/ \
 Per ogni cambiamento effetuato, il browser verrà aggiornato automaticamente visualizzando il cambiamento effettuato.
 
 ## Per il production: `npm run prod` o `yarn prod`
