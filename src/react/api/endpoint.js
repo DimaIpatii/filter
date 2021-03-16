@@ -1,1 +1,1 @@
-export default 'https://jsonplaceholder.typicode.com/todos';
+export default "https://jsonplaceholder.typicode.com/todos";
