@@ -19,7 +19,7 @@ const Page = ({ step, selectPage }) => {
             }`}
             onClick={() => selectPage(step.id)}
           >
-            {step.id}
+            <span>{step.id}</span>
           </button>
         </li>
       )}

@@ -1,6 +1,7 @@
 .app{
     position: relative;
     @include size(100%,100vh);
+    min-height: 100vh;
     overflow-x: hidden;
     
     @include viewport('laptop'){

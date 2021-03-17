@@ -1,6 +1,7 @@
 .form{
     @include size(100%);
     position: absolute;
+    z-index: 100;
     top: 0rem;
     right: 0rem;
     padding: 3rem;
@@ -37,6 +38,7 @@
         height : inherit;
         padding: 0;
         border: none;
+        
 
         & legend{margin-bottom: 3.5rem;}
         & h2{ margin-bottom: 1.5rem;}

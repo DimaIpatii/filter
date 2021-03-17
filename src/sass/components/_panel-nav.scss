@@ -2,21 +2,15 @@
 
     &__list-item{
         @include size(3rem);
-        margin: 0 .5rem;
+        margin: 0 1rem;
         border-radius: 10rem;
         cursor: pointer;
 
-        &:first-child{ margin-left: 1.5rem;}
-        &:last-child{ margin-right: 1.5rem;}
-
         @include viewport('tab-port'){
             @include size(2.5rem);
-
-            &:first-child{ margin-left: 1rem;}
-            &:last-child{ margin-right: 1rem;}
         }
 
-        & a { margin-top: .3rem;}
+        & span { margin-top: .3rem;}
         &_dots{
             cursor:not-allowed;
         }
@@ -25,6 +19,13 @@
 
     &__icon{
         @include size(2rem);
+
+        &:first-child{
+            margin-right: 1rem; 
+        }
+        &:last-child{
+            margin-left: 1rem; 
+        }
 
         @include viewport('tab-port'){
             @include size(1.5rem);
