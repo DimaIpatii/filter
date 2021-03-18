@@ -6,6 +6,7 @@
     
     @include viewport('laptop'){
         @include size(100%,max-content);
+        min-height: max-content;
     }
 
     &__sidebar{
